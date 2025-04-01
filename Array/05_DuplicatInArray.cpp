@@ -30,5 +30,3 @@ int findDuplicate(vector<int> &arr)
             return access;
     }
 }
-
-
