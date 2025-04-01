@@ -70,3 +70,33 @@ bool ninjaGram(string &str)
     }
     return false;
 }
+
+
+// Alternative Approach: Using Set
+// We can use a set to store the unique characters in the string.
+// We can iterate through the string and insert each character into the set.
+// If the size of the set becomes 26, we can return true. Otherwise, we return false.
+// The set will automatically handle duplicates for us.
+// The set will only store unique characters, so we don't need to check for duplicates manually.
+// The set will also handle the case where the input string contains uppercase letters, as we can convert them to lowercase before inserting them into the set.
+// The set will automatically handle the case where the input string contains uppercase letters, as we can convert them to lowercase before inserting them into the set.
+
+// The time complexity of this approach is O(n), where n is the length of the string, as we need to iterate through the string once.
+// The space complexity is O(1) since we are using a fixed-size set of size 26.
+
+#include <bits/stdc++.h> 
+bool ninjaGram(string &str)
+{
+    // an empty set to store each char
+    set<char> charSet;
+
+    // check if the character is an alphabetic character before inserting it into the set
+    // if the size of the set becomes 26, we can return true otherwise, we return false
+    for(char ch: str){
+        if(isalpha(ch)){
+            charSet.insert(tolower(ch));
+        }
+    }
+
+    return charSet.size() == 26;
+}
