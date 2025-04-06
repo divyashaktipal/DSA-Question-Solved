@@ -2,7 +2,7 @@
 Source: Code360
 Link: POTD
 
-Duplicate In Array:
+sort odd even:
 
 Problem statement:
     You are given a 0-indexed array ‘NUMS’ consisting of ‘N’ integers. Sort the array ‘NUMS’ in such a way that the 
