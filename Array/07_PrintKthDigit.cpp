@@ -24,8 +24,8 @@ Explanation for sample input 1:
 2 ^ 4 = 16, and the 1st digit in 16 from the right is 6.
 ----------------------------------------------------------------------------------------------------------------------*/
 // Date: 06/04/2025
-// Time Complexity: 
-// Space Complexity: 
+// Time Complexity: O(M+K)
+// Space Complexity: O(d) 
 
 // Approach: 
 // Calcualate the power of N^M using pow(N,M) and 
