@@ -13,28 +13,31 @@ int main(){
         for(int j = 0; j < n; j++)
             cin >> arr[i][j];
 
-    cout << endl << "The origi   nal matrix is: " << endl;
+    cout << endl << "The original matrix is: " << endl;
     for(int i = 0; i < m; i++){
         for(int j = 0; j < n; j++)
             cout << arr[i][j] << " ";
         cout << endl;
     }
 
-
-
+    // transpose in the same matrix
     
-    // Calculate the transpose of the matrix
-    int transpose[n][m]; // Transpose will have dimensions n x m
-    for(int i = 0; i < m; i++)
-        for(int j = 0; j < n; j++)
-            transpose[j][i] = arr[i][j];
+    for(int i = 0; i <= m-1; i++){ // rows
+        for(int j = i+1; j <= n-1; j++){ // cols
+            // swaping of i, j and j, i
+            int temp = arr[i][j];
+            arr[i][j] = arr[j][i];
+            arr[j][i] = temp;
 
+        } 
+    }  
+            
     cout << endl << "The transpose of the matrix is: " << endl;
 
     // print the transpose matrix
     for(int i = 0; i < n; i++){ // Loop through rows of the transpose
         for(int j = 0; j < m; j++) // Loop through columns of the transpose
-            cout << transpose[i][j] << " ";
+            cout << arr[i][j] << " ";
         cout << endl;
     }
     return 0;
