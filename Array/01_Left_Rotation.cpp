@@ -15,6 +15,8 @@ Output: [2, 3, 4, 5, 1]
 // Space Complexity: O(1)
 
 #include <bits/stdc++.h> 
+using namespace std;
+
 vector<int> rotateArray(vector<int>& arr, int n) {
     int temp = arr[0];
 
@@ -26,4 +28,18 @@ vector<int> rotateArray(vector<int>& arr, int n) {
     // update the last element with temp variable.
     arr[n-1] = temp;
     return arr;
+}
+
+int main(){
+    vector<int> arr;
+    arr.push_back(1);
+    arr.push_back(2);
+    arr.push_back(3);
+    arr.push_back(4);
+    arr.push_back(5);
+
+    int n = arr.size();
+
+    cout << rotateArray(arr, n);
+
 }
