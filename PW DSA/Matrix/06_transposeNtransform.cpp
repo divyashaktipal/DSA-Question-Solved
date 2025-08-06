@@ -32,9 +32,9 @@ int main(){
             int temp = arr[i][j];
             arr[i][j] = arr[j][i];
             arr[j][i] = temp;
-        } 
-    }  
-            
+        }
+    }
+
     cout << endl << "The transpose of the matrix is: " << endl;
 
     // print the transpose matrix
